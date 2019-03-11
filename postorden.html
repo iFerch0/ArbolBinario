@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Postorden | Arboles Dirigidos - Teoria de Grafos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Massi" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.3.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Arboles Dirigidos - Teoria de Grafos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Inicio</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="metodologa.html" class="no-ch">Metodología</a></li>
+   <li class="current-page-parent"><a href="conceptos.html" class="current-page-parent daddy">Conceptos</a>
+   <ul>
+      <li><a href="propiedades.html" class="no-ch">Propiedades</a></li>
+      <li><a href="vrtices_internos.html" class="no-ch">Vértices internos</a></li>
+      <li><a href="niveles_rbol_mxima_longitud_mnima_longitud.html" class="no-ch">Niveles árbol (máxima longitud, mínima longitud)</a></li>
+      <li><a href="longitud_de_la_cadena_de_un_arbol.html" class="no-ch">Longitud de la cadena de un arbol</a></li>
+      <li class="current-page-parent"><a href="construccin_de_un_rbol_binario.html" class="current-page-parent daddy">Construcción de un árbol binario</a>
+      <ul>
+         <li><a href="preorden.html" class="no-ch">Preorden</a></li>
+         <li><a href="inorden.html" class="no-ch">Inorden</a></li>
+         <li id="active"><a href="postorden.html" class="active no-ch">Postorden</a></li>
+         <li><a href="recorrido_arbol_binario__video.html" class="no-ch">Recorrido arbol binario - Video</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="conclusin.html" class="no-ch">Conclusión</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="inorden.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="recorrido_arbol_binario__video.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Postorden</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id16">
+<div class="iDevice emphasis0">
+<div id="ta16_85" class="block iDevice_content">
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">En un recorrido en postorden, realizamos recursivamente recorridos en postorden del subárbol izquierdo y del subárbol derecho seguidos de una visita al nodo raíz.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Ejemplo: Observemos un árbol y el recorrido de este:</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><img src="img0.2.png" width="423" height="344" alt="fig9" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p style="text-align: center;"><span style="font-size: 10pt;"><strong><span style="font-family: verdana, geneva, sans-serif;">Fig 8: Recorrido de un árbol postorden</span></strong></span></p>
+<p style="text-align: justify;"><strong><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Solución: </span></strong></p>
+<h1 style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Profundidad-primero</span></h1>
+<ul>
+<li style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Secuencia de recorrido de preorden: F, B, A, D, C, E, G, I, H (raíz, izquierda, derecha)</span></li>
+<li style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Secuencia de recorrido de inorden: A, B, C, D, E, F, G, H, I (izquierda, raíz, derecha); note cómo esto produce una secuencia ordenada</span></li>
+<li style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Secuencia de recorrido de postorden: A, C, E, D, B, H, I, G, F (izquierda, derecha, raíz)</span></li>
+</ul>
+<h1 style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Anchura-primero</span></h1>
+<ul>
+<li style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Secuencia de recorrido de orden por nivel: F, B, G, A, D, I, C, E, H</span></li>
+</ul>
+<p><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">En resumen:</span></p>
+<ul>
+<li align="left"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Atraviese el sub-arbol izquierdo</span></li>
+<li align="left"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Atraviese el sub-arbol derecho</span></li>
+<li align="left"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Diríjase al inicio de la raiz</span></li>
+</ul>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="inorden.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="recorrido_arbol_binario__video.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

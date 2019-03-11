@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Niveles árbol (máxima longitud, mínima longitud) | Arboles Dirigidos - Teoria de Grafos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Massi" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.3.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Arboles Dirigidos - Teoria de Grafos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Inicio</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="metodologa.html" class="no-ch">Metodología</a></li>
+   <li class="current-page-parent"><a href="conceptos.html" class="current-page-parent daddy">Conceptos</a>
+   <ul>
+      <li><a href="propiedades.html" class="no-ch">Propiedades</a></li>
+      <li><a href="vrtices_internos.html" class="no-ch">Vértices internos</a></li>
+      <li id="active"><a href="niveles_rbol_mxima_longitud_mnima_longitud.html" class="active no-ch">Niveles árbol (máxima longitud, mínima longitud)</a></li>
+      <li><a href="longitud_de_la_cadena_de_un_arbol.html" class="no-ch">Longitud de la cadena de un arbol</a></li>
+      <li><a href="construccin_de_un_rbol_binario.html" class="daddy">Construcción de un árbol binario</a>
+      <ul class="other-section">
+         <li><a href="preorden.html" class="no-ch">Preorden</a></li>
+         <li><a href="inorden.html" class="no-ch">Inorden</a></li>
+         <li><a href="postorden.html" class="no-ch">Postorden</a></li>
+         <li><a href="recorrido_arbol_binario__video.html" class="no-ch">Recorrido arbol binario - Video</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="evaluacin.html" class="no-ch">Evaluación</a></li>
+   <li><a href="conclusin.html" class="no-ch">Conclusión</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="vrtices_internos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="longitud_de_la_cadena_de_un_arbol.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Niveles árbol (máxima longitud, mínima longitud)</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_85" class="block iDevice_content">
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">En un árbol binario T. se dice que un vértice Vi está en el nivel li. Si la distancia de la raíz Vr es igual a li. Es decir, d (Vr, Vi)) = li</span></p>
+<p><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><img src="img1.1.png" style="display: block; margin-left: auto; margin-right: auto;" width="668" height="269" /></span></p>
+<p style="text-align: center;"><span style="font-size: 10pt;"><strong><span style="font-family: verdana, geneva, sans-serif;">Fig 2</span></strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Fig 2: en esta figura, se muestra un árbol binario T con 9 vértices y 3 niveles 1, 2, 3; el número de vértices en cada nivel es 2, 4 y 2 respectivamente. (La raíz del árbol se encuentra en el nivel 0).</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">En muchas aplicaciones de los arboles binarios es importante determinar el máximo o el mínimo números de niveles que puada tener un árbol binario T con n vértice. En la figura 3 se muestran dos árboles binarios con 9 vértices.</span></p>
+<p><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><img src="img1.1.png" width="773" height="294" alt="fig3" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p style="text-align: center;"><span style="font-size: 10pt;"><strong><span style="font-family: verdana, geneva, sans-serif;">Fig 3</span></strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><strong></strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Con mínimo número de niveles fig. 3 (a) (en este caso 3) y máximo número de niveles fig. 3 (b) (en este case 4).</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">El máximo nivel, lmax de un árbol binario T se llama la <strong>ALTURA </strong>del árbol. Así, en el árbol de la figure 3 (a) y 3 (b) se tiene que lmax = 3 y lmax = 4 respectivamente.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Para un arbola binario T con n vértices se tiene que la <strong>MÁXIMA ALTURA</strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><strong> </strong></span><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">También se tiene que en un árbol binario T con n vértices. <strong>LA MÍNIMA ALTURA</strong>𝑚𝑖𝑛𝐿𝑚𝑎𝑥 = (log 2 (n + 1) – 1) (donde [x] significa el menor entero mayor o igual a x.). Recordando que [X] = k si y solo si k - 1 &lt; x ≤ k. podemos demostrar la igualdad. En efecto; para n impar se tiene:</span><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"> </span></p>
+<ul style="text-align: justify;">
+<li><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Si minlmax = 1 entonces n=3; n = 21 + 1</span></li>
+<li><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Si minlmax = 2 entonces n=5 o n = 7; 5 ≤ n ≤ 7; n = 22 + 1 ≤ n ≤ 22+1 - 1</span></li>
+<li><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Si minlmax = 3 entonces n=9 o n = 15; 9 ≤ n ≤ 15; n = 23 + 1 ≤ n ≤ 23+1 - 1</span></li>
+<li><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Si minLmax = k, entonces 2k + 1 ≤ n ≤ 2k+1 - 1</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Entonces:</span></p>
+<p style="text-align: center;"><strong><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><em>2k + 2 ≤ n + 1 ≤ 2k+1</em></span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><em>2k &lt; n + 1 ≤ 2k+1 tomando log2 se tiene</em></span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><em>k &lt; log2 (n + 1) ≤ k +1</em></span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><em>k – 1 &lt; log2 (n + 1) – 1 ≤ k</em></span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;"><em>k = [log2 (n + 1) - 1]</em></span></strong></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva, sans-serif;">Hemos demostrado que si minLmax = K se tiene que k = (log2 (n + 1) – 1) lo cual significa minLmax = (log2 (n + 1) - 1)</span></p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="vrtices_internos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="longitud_de_la_cadena_de_un_arbol.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>
